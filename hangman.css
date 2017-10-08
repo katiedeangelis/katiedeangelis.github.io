@@ -1,0 +1,252 @@
+@font-face {
+    font-family: alienfont;
+    src: url(AlienResurrection.ttf);
+}
+
+.mainheader {
+    height: 100px;
+    line-height: 50px;
+    border-bottom: 4px solid #cccccc;
+    margin: 0;
+    background-color: #ffffff;
+    position: relative;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    transition: height 2s;
+}
+
+.con-header {
+    width: 960px;
+    margin: 0 auto;
+    transition: width 2s;
+}
+
+.con-header h1 {
+    line-height: 100px;
+    display: inline-block;
+    font-size: 30px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 0px 20px 0px 20px;
+    margin: 0px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+.menu {
+    float: right;
+    color: #cccccc;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: inline-block;
+    line-height: 100px;
+    padding: 0px 10px 0px 10px;
+    font-size: 1.4em;
+    color: #cccccc;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    left: 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.menu li:hover:not(.active) {
+    background-color: #4aaaa5;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4aaaa5;
+}
+
+.main-hangman-body {
+    width: 100%;
+    margin: 0 auto;
+    transition: height 2s;
+}
+
+.main-hangman-content {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: alienfont;
+    font-size: 3em;
+    transition: height 2s;
+}
+
+#instructions {
+    color: white;
+    padding: 30px;
+}
+
+#alieni {
+    font-size: 200%;
+    color: rgba(43, 226, 43, 0.77);
+    text-shadow: 1px 1px 100px rgba(224, 231, 235, 0.76), 0 0 100px rgba(134, 223, 186, 0.8), 0 0 100px #1FBD60;
+    transition: height 2s;
+}
+
+h2, h3, div, p{
+    color: white;
+}
+
+.title-spaces {
+    display: inline-block;
+    width: 10px;
+}
+
+body {
+    margin: 0 auto;
+    background-image: url(art/space.gif);
+    background-repeat: repeat;
+    overflow-x: hidden;
+}
+
+#alienrimage {
+    width: 400px;
+}
+
+.alienr {
+    right: 800px;
+    top: 300px;
+    position: absolute;
+    z-index: 1;
+    animation: alienr 30s infinite;
+}
+
+@keyframes alienr {
+    0% {
+        left: -500px;
+    }
+    30% {
+        left: -200px;
+    }
+    33% {
+        left: -200px;
+    }
+    100% {
+        left: -500px;
+    }
+}
+
+#alienlimage {
+    width: 400px;
+}
+
+.alienl {
+    top: 85px;
+    right: -500px;
+    position: absolute;
+    z-index: 1;
+    animation: alienl 30s infinite;
+    animation-delay: 15s;
+}
+
+@keyframes alienl {
+    0% {
+        right: -500px;
+    }
+    30% {
+        right: -200px;
+    }
+    33% {
+        right: -200px;
+    }
+    100% {
+        right: -500px;
+    }
+}
+
+footer {
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    border-top: 10px solid #4aaaa5;
+    margin: 60px 0 0 0;
+    background-color: #666666;
+}
+
+#copy {
+    color: #cccccc;
+    font-size: .7em;
+    vertical-align: middle;
+    line-height: 85px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 980px) {
+    /* For desktop: */
+    .main {
+        width: 420px;
+    }
+    .content,
+    .con-header,
+    .main-hangman-body {
+        width: 725px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For tablet: */
+    .main {
+        width: 720px;
+    }
+    .content,
+    .con-header,
+    .main-hangman-body {
+        width: 720px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /* For mobile phone: */
+    .main,
+    .content,
+    .main-hangman-body {
+        width: 595px;
+    }
+    .mainheader {
+        height: 200px;
+    }
+    .menu li {
+        float: none;
+        display: inline-block;
+        flex-grow: 1;
+    }
+    .menu {
+        float: none;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .con-header {
+        width: 100%;
+    }
+    .con-header h1 {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    img {
+        width: 100%;
+    }
+}
